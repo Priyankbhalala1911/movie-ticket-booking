@@ -230,7 +230,7 @@
     right: -15px;
   }
   .home_container .movie_section .movie_frame {
-    max-width: 200px;
+    max-width: 250px;
   }
   .movie_section .movie_frame .movie_container {
     flex: 0 0 100%;
