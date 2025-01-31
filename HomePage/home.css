@@ -9,7 +9,7 @@
 }
 :root {
 	--royal-blue: #1a2c50;
-	--sunshine-yellow: #ffbe00;
+	--syellowunshine-: #ffbe00;
 	--sweet-red: #ff6b6b;
 	--sky-blue: #118eea;
 	--white: #ffffff;
@@ -33,6 +33,13 @@
 	align-items: center;
 	position: relative;
 }
+.home_container header.fixed {
+	position: fixed;
+	top: 0;
+	box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+	z-index: 1000;
+	background: white;
+}
 .home_container .logo {
 	width: 64px;
 	height: 64px;
@@ -51,6 +58,7 @@
 	justify-content: space-between;
 	align-items: center;
 	list-style: none;
+	background: white;
 }
 .home_container .navbar li a {
 	text-decoration: none;
@@ -69,6 +77,7 @@
 .home_container .navbar li.user {
 	cursor: pointer;
 	width: 40px;
+	align-self: center;
 	height: 40px;
 	background: linear-gradient(var(--pastel-yellow), var(--extra-color));
 	border-radius: 50%;
@@ -76,11 +85,19 @@
 	justify-content: center;
 	align-items: center;
 }
-.home_container .navbar li.notification {
+.home_container .navbar li.notification ,
+.home_container .navbar li.menu_bar{
 	list-style: none;
 	text-align: center;
 	align-self: center;
-	font-size: 20px;
+	font-size: 32px;
+	font-weight: 700;
+}
+.home_container .navbar li.menu_bar{
+	display: none;
+}
+.home_container .navbar li.notification a{
+	font-size: 30px;
 }
 .home_container .navbar li.user a {
 	font-family: var(--font2);
@@ -133,7 +150,6 @@
 	gap: 78px;
 	margin: auto;
 	overflow: hidden;
-
 }
 .movie_section .movie_frame .movie_container {
 	flex: 0 0 calc(50% - 40px);
@@ -282,7 +298,7 @@
 	object-fit: cover;
 }
 
-.movie_details_container .movie_container .image:hover{
+.movie_details_container .movie_container .image:hover {
 	cursor: pointer;
 	opacity: 0.8;
 }
@@ -385,18 +401,18 @@
 	font-weight: 500;
 	line-height: 21px;
 }
-.footer .footer_container .footer_content li a{
+.footer .footer_container .footer_content li a {
 	text-decoration: none;
-    font-size: 16px;
+	font-size: 16px;
 	font-weight: 400;
 	line-height: 24px;
 	color: var(--text-color);
-  }
-.footer .footer_container .footer_content li a:hover{
-    border-bottom: 1px solid var(--royal-blue);
+}
+.footer .footer_container .footer_content li a:hover {
+	border-bottom: 1px solid var(--royal-blue);
 	padding-bottom: 3px;
 	cursor: pointer;
-  }
+}
 .footer .social_media {
 	display: flex;
 	flex-direction: column;

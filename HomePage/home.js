@@ -1,3 +1,39 @@
+//scroll to fixed navabar
+
+window.addEventListener("scroll", function () {
+    const navbar = document.getElementById("header");
+    if (window.scrollY > 50) {
+        navbar.classList.add("fixed");
+    } else {
+        navbar.classList.remove("fixed");
+    }
+});
+
+//menu-bar
+const menubar = document.querySelector(".menu_bar")
+const item = document.querySelector(".nav-item")
+let value = false;
+
+menubar.addEventListener("click", () => {
+    value = !value;
+    if (value === true) {
+
+        item.classList.add("active")
+    }
+    else {
+        item.classList.remove("active");
+    }
+
+    if (item.classList.contains("active")) {
+        menubar.innerHTML = "X"
+    }
+    else {
+        menubar.innerHTML = "&#9776;"
+    }
+})
+
+
+
 let counter = 0;
 let counter1 = 0;
 
