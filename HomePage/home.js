@@ -2,10 +2,11 @@ let counter = 0;
 let counter1 = 0;
 
 autoScrolling();
-const slides = document.querySelectorAll(".movie_list .movie_container");
-
+const slides = document.querySelectorAll(".movie_frame .movie_container");
 const next = document.querySelector(".right_side");
 const prev = document.querySelector(".left_side");
+const itemWidth = slides[0].offsetWidth + 78;
+console.log(itemWidth)
 
 next.addEventListener("click", slideNext);
 prev.addEventListener("click", slidePrev);
@@ -22,7 +23,7 @@ function slidePrev() {
 
 function updateSlidePosition() {
     slides.forEach((slide, index) => {
-        slide.style.transform = `translateX(-${counter * 575}px)`;
+        slide.style.transform = `translateX(-${counter * itemWidth}px)`;
     });
 }
 
