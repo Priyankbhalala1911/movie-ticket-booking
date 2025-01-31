@@ -2,6 +2,11 @@
   .home_container .advertisement .advertisement_container .image {
     width: 100%;
   }
+  .movie_details_container-2 .movie_container {
+    width: 100%;
+    max-height: 840px;
+    height: 100%;
+  }
 }
 
 @media (max-width: 1220px) {
@@ -201,19 +206,17 @@
     right: -15px;
   }
   .home_container .movie_section .movie_frame {
-    max-width: 150px;
+    max-width: 200px;
+  }
+  .movie_section .movie_frame .movie_container {
+    flex: 0 0 100%;
+    width: 100%;
   }
   .home_container .movie_section .movie_frame .main_content {
     margin-top: 32px;
   }
   .home_container .movie_section .movie_frame .main_content .title {
     font-size: 20px;
-  }
-  .brand_name {
-    gap: 5px;
-  }
-  .brand_name .btn {
-    padding: 5px;
   }
 
   .movie_news .main_content_details .main_content .title {
@@ -259,5 +262,12 @@
   .footer .footer_container .footer_content li {
     font-size: 16px;
     font-weight: 400;
+  }
+  
+}
+
+@media (max-width:330px) {
+  .home_container .navbar .nav-item li a {
+    font-size: 14px;
   }
 }
